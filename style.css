@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-image: url('https://www.w3schools.com/css/paper.gif');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+}
+
+#wrapper {
+    max-width: 800px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9); 
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(234, 36, 36, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.form-container label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    font-size: 14px;
+    color: #333;
+    background: rgba(255, 255, 255, 0.8);
+    transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.form-container input:focus {
+    border-color: #007bff;
+    background: rgba(255, 255, 255, 1);
+    outline: none;
+}
+
+.form-container button {
+    padding: 12px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.form-container button:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+}
+
+.display-container {
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.display-container h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+    animation: slideIn 1s ease-in-out;
+}
+
+#displayData {
+    text-align: left;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+#displayData p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    animation: slideIn 1s ease-in-out;
+}
+
+#editButton, #deleteButton {
+    padding: 12px 24px;
+    margin: 10px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#editButton:hover, #deleteButton:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+}
+
+#deleteButton {
+    background: #ff4d4d;
+}
+
+#deleteButton:hover {
+    background: #cc0000;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    #wrapper {
+        padding: 20px;
+    }
+
+    .form-container h1, .display-container h1 {
+        font-size: 22px;
+    }
+
+    .form-container input, #displayData p {
+        font-size: 14px;
+    }
+
+    #editButton, #deleteButton {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
